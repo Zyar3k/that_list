@@ -25,6 +25,44 @@ const Header = () => {
         href: "/statystyki",
       },
     ],
+    listItems: [
+      {
+        id: "allBooks",
+        name: "1Lista",
+        defaultValue: true,
+        icon: "fas fa-network-wired",
+      },
+      {
+        id: "amazon",
+        name: "Amazon",
+        defaultValue: false,
+        icon: "fas fa-dice-one",
+      },
+      {
+        id: "bbc",
+        name: "BBC",
+        defaultValue: false,
+        icon: "fas fa-dice-two",
+      },
+      {
+        id: "empik",
+        name: "Empik",
+        defaultValue: false,
+        icon: "fas fa-dice-three",
+      },
+      {
+        id: "gandalf",
+        name: "Gandalf",
+        defaultValue: false,
+        icon: "fas fa-dice-four",
+      },
+      {
+        id: "pozycje",
+        name: "Pozycje",
+        defaultValue: false,
+        icon: "fas fa-dice-five",
+      },
+    ],
     openIcon: "fa-bars",
     closeIcon: "fa-times",
   };
@@ -60,6 +98,25 @@ const Header = () => {
             }
           ></span>
         </div>
+      </div>
+      <div className="listBar">
+        {dataHeader.listItems.map((item, index) => (
+          <span key={index}>
+            <input
+              type="radio"
+              id={item.id}
+              name="chosenList"
+              value={item.id}
+              className="listBar__input"
+              defaultChecked={item.defaultValue}
+            />
+
+            <label className="listBar__label" htmlFor={item.id}>
+              <i className={item.icon}></i>
+              <div className="listBar__displayBox">{item.name}</div>
+            </label>
+          </span>
+        ))}
       </div>
     </header>
   );
