@@ -25,7 +25,7 @@ const Header = () => {
   }, [location]);
 
   const dataHeader = {
-    logo: { name: "LOGO", href: "/" },
+    logo: { name: "ONElist", href: "/" },
     navItems: [
       {
         name: "Home",
@@ -88,6 +88,12 @@ const Header = () => {
         <div className="header__logo">
           <NavLink to={dataHeader.logo.href}>{dataHeader.logo.name}</NavLink>
         </div>
+        {isHome && (
+          <form className="header__form form" action="">
+            <input type="text" />
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </form>
+        )}
         <nav className="header__nav">
           <ul className={isOpen ? "header__nav-list open" : "header__nav-list"}>
             {dataHeader.navItems.map((item, index) => (
