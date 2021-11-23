@@ -1,5 +1,10 @@
+$header-height: 60px;
+$first-color: navy;
+$second-color: white;
+$third-color: grey;
+
 header {
-  background-color: navy;
+  background-color: $first-color;
   position: sticky;
   top: 0;
 }
@@ -9,14 +14,23 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  height: 30px;
+  height: $header-height;
 
   &__logo {
-    color: white;
+    color: $second-color;
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 20px;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: $third-color;
+    }
   }
 
   &__nav-list {
@@ -28,7 +42,7 @@ header {
   &__nav-item {
   }
   &__nav-link {
-    color: white;
+    color: $second-color;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
@@ -36,7 +50,7 @@ header {
     text-decoration: none;
 
     &:hover {
-      color: grey;
+      color: $third-color;
     }
   }
 
@@ -54,16 +68,14 @@ header {
     &__nav-list {
       position: absolute;
       margin: 0;
-      top: 30px;
-      left: 0;
+      top: $header-height;
       left: -100%;
-      background-color: navy;
-
+      background-color: $first-color;
       flex-direction: column;
       justify-content: space-around;
-
-      height: calc(100vh - 30px);
+      height: calc(100vh - #{$header-height});
       width: 100%;
+      transition: all 0.5s ease-in-out;
 
       &.open {
         left: 0;
@@ -77,12 +89,13 @@ header {
       margin: 0 20px;
       height: 100%;
       width: 30px;
+      font-size: 24px;
 
       position: relative;
 
       .fas {
         position: absolute;
-        color: white;
+        color: $second-color;
       }
     }
   }

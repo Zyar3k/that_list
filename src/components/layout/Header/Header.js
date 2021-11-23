@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+
 import "./Header.scss";
 
 const Header = () => {
@@ -8,19 +10,19 @@ const Header = () => {
   const closeMenu = () => setIsOpen(false);
 
   const dataHeader = {
-    logo: "LOGO",
+    logo: { name: "LOGO", href: "/" },
     navItems: [
       {
-        name: "NavItemOne",
+        name: "Home",
         href: "/",
       },
       {
-        name: "NavItemTwo",
-        href: "/",
+        name: "Twoja lista",
+        href: "/twoja-lista",
       },
       {
-        name: "NavItemThree",
-        href: "/",
+        name: "Statystyki",
+        href: "/statystyki",
       },
     ],
     openIcon: "fa-bars",
@@ -30,18 +32,20 @@ const Header = () => {
   return (
     <header>
       <div className="header">
-        <div className="header__logo">{dataHeader.logo}</div>
+        <div className="header__logo">
+          <NavLink to={dataHeader.logo.href}>{dataHeader.logo.name}</NavLink>
+        </div>
         <nav className="header__nav">
           <ul className={isOpen ? "header__nav-list open" : "header__nav-list"}>
             {dataHeader.navItems.map((item, index) => (
               <li key={index} className="header__nav-item">
-                <a
-                  href={item.href}
+                <NavLink
+                  to={item.href}
                   className="header__nav-link"
                   onClick={closeMenu}
                 >
                   {item.name}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
