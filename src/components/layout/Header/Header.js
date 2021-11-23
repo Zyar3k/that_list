@@ -1,13 +1,28 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 
 import "./Header.scss";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isHome, setIsHome] = useState(true);
+  const [subtitle, setSubtitle] = useState("");
+  let location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
+  useEffect(() => {
+    if (location.pathname === "/twoja-lista") {
+      setIsHome(false);
+      setSubtitle("Twoja lista");
+    } else if (location.pathname === "/statystyki") {
+      setIsHome(false);
+      setSubtitle("Statystyki");
+    } else {
+      setIsHome(true);
+    }
+  }, [location]);
 
   const dataHeader = {
     logo: { name: "LOGO", href: "/" },
@@ -100,23 +115,29 @@ const Header = () => {
         </div>
       </div>
       <div className="listBar">
-        {dataHeader.listItems.map((item, index) => (
-          <span key={index}>
-            <input
-              type="radio"
-              id={item.id}
-              name="chosenList"
-              value={item.id}
-              className="listBar__input"
-              defaultChecked={item.defaultValue}
-            />
+        {isHome ? (
+          <>
+            {dataHeader.listItems.map((item, index) => (
+              <span key={index}>
+                <input
+                  type="radio"
+                  id={item.id}
+                  name="chosenList"
+                  value={item.id}
+                  className="listBar__input"
+                  defaultChecked={item.defaultValue}
+                />
 
-            <label className="listBar__label" htmlFor={item.id}>
-              <i className={item.icon}></i>
-              <div className="listBar__displayBox">{item.name}</div>
-            </label>
-          </span>
-        ))}
+                <label className="listBar__label" htmlFor={item.id}>
+                  <i className={item.icon}></i>
+                  <div className="listBar__displayBox">{item.name}</div>
+                </label>
+              </span>
+            ))}
+          </>
+        ) : (
+          <p className="listBar__subtitle">{subtitle}</p>
+        )}
       </div>
     </header>
   );

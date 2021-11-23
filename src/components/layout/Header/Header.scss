@@ -63,6 +63,8 @@ header {
 
 .listBar {
   display: flex;
+  height: $listBar-height;
+
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -70,7 +72,6 @@ header {
 
   &__label {
     width: 120px;
-    height: $listBar-height;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,9 +80,18 @@ header {
     i {
       margin-right: 10px;
     }
+
+    &.hide {
+      height: 0;
+    }
   }
   &__displayBox {
     font-weight: 800;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    margin: 0 auto;
   }
 }
 
