@@ -3,18 +3,30 @@
 .bookTile {
   width: 30%;
   margin: 10px 20px;
-  padding: 0 14px;
-  min-width: 360px;
+  min-width: 380px;
+  min-height: 140px;
   border-radius: 14px;
   box-shadow: 0 0 4px 1px $light-color-hover;
   cursor: pointer;
   transition: all 0.3s ease;
 
+  &__title,
+  &__author {
+    padding: 0 $base-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
   &__title {
+    height: 70%;
+    font-size: 24px;
     color: $primary-color;
   }
 
   &__author {
+    height: 30%;
+    font-size: 14px;
     color: $light-color-hover;
     font-weight: bold;
     font-style: italic;
@@ -27,6 +39,40 @@
 
 @media (max-width: 992px) {
   .bookTile {
-    min-width: 340px;
+    min-width: 350px;
+    margin: 8px 12px;
+    padding: 0 8px;
+
+    min-height: 120px;
+    &__title {
+      font-size: 20px;
+    }
+
+    &__author {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .bookTile {
+    min-width: 250px;
+    margin: 8px;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bookTile {
+    width: 92%;
+    margin: 8px;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 340px) {
+  .bookTile {
+    width: 85%;
+    margin: 8px 0;
   }
 } ;
