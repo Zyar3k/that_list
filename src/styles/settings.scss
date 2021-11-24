@@ -1,0 +1,11 @@
+/* colors */
+$primary-color: navy;
+$light-color: white;
+$light-color-hover: grey;
+$font-color: rgb(25, 25, 25);
+
+/* other */
+$navbar-height: 60px;
+$listBar-height: 40px;
+$header-height: calc(#{$navbar-height} + #{$listBar-height});
+$sidebar-width: 300px;

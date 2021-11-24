@@ -1,6 +1,5 @@
 import { Switch, Route } from "react-router-dom";
 
-import "./App.scss";
 import Header from "./components/layout/Header/Header";
 import Home from "./components/views/Home/Home";
 import UserList from "./components/views/UserList/UserList";
@@ -11,17 +10,19 @@ function App() {
     <>
       <Header />
 
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/statystyki">
-          <Stats />
-        </Route>
-        <Route path="/twoja-lista">
-          <UserList />
-        </Route>
-      </Switch>
+      <main>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/statystyki">
+            <Stats />
+          </Route>
+          <Route path="/twoja-lista">
+            <UserList />
+          </Route>
+        </Switch>
+      </main>
     </>
   );
 }

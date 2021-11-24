@@ -27,10 +27,10 @@ const Header = () => {
   const dataHeader = {
     logo: { name: "ONElist", href: "/" },
     navItems: [
-      {
-        name: "Home",
-        href: "/",
-      },
+      // {
+      //   name: "Home",
+      //   href: "/",
+      // },
       {
         name: "Twoja lista",
         href: "/twoja-lista",
@@ -91,7 +91,7 @@ const Header = () => {
         {isHome && (
           <form className="header__form form" action="">
             <input type="text" />
-            <i class="fa fa-search" aria-hidden="true"></i>
+            <i className="fa fa-search" aria-hidden="true"></i>
           </form>
         )}
         <nav className="header__nav">

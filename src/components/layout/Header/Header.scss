@@ -1,14 +1,10 @@
-$navbar-height: 60px;
-$listBar-height: 40px;
-$header-height: calc(#{$navbar-height} + #{$listBar-height});
-$first-color: navy;
-$second-color: white;
-$third-color: grey;
+@import "../../../styles/global.scss";
 
 header {
-  background-color: $first-color;
+  background-color: $primary-color;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .header {
@@ -19,7 +15,7 @@ header {
   height: $navbar-height;
 
   &__logo {
-    color: $second-color;
+    color: $light-color;
     font-size: 34px;
     font-weight: bold;
     // text-transform: uppercase;
@@ -31,7 +27,7 @@ header {
     }
 
     &:hover {
-      color: $third-color;
+      color: $light-color-hover;
     }
   }
 
@@ -46,12 +42,12 @@ header {
       outline: none;
       &:focus,
       &:active {
-        background-color: $third-color;
+        background-color: $light-color-hover;
       }
     }
 
     i {
-      color: $third-color;
+      color: $light-color-hover;
       position: absolute;
       right: 6px;
       top: 50%;
@@ -69,7 +65,7 @@ header {
   &__nav-item {
   }
   &__nav-link {
-    color: $second-color;
+    color: $light-color;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
@@ -77,7 +73,7 @@ header {
     text-decoration: none;
 
     &:hover {
-      color: $third-color;
+      color: $light-color-hover;
     }
   }
 
@@ -93,7 +89,7 @@ header {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  color: $second-color;
+  color: $light-color;
 
   &__label {
     width: 120px;
@@ -125,7 +121,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label {
-  color: $third-color;
+  color: $light-color-hover;
 }
 
 @media (max-width: 768px) {
@@ -141,7 +137,7 @@ input[type="radio"]:checked + label {
       margin: 0;
       top: $header-height;
       left: -100%;
-      background-color: $first-color;
+      background-color: $primary-color;
       flex-direction: column;
       justify-content: space-around;
       height: calc(100vh - #{$header-height});
@@ -166,7 +162,7 @@ input[type="radio"]:checked + label {
 
       .fas {
         position: absolute;
-        color: $second-color;
+        color: $light-color;
       }
     }
   }
