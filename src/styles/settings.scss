@@ -1,7 +1,12 @@
 /* colors */
-$primary-color: navy;
-$light-color: white;
-$light-color-hover: grey;
+// $primary-color: navy;
+// $light-color: white;
+// $light-color-hover: grey;
+
+$primary-color: #eba83a;
+$light-color: #f3f4ed;
+$light-color-hover: #bb371a;
+
 $font-color: rgb(25, 25, 25);
 
 /* other */
@@ -10,3 +15,16 @@ $listBar-height: 40px;
 $header-height: calc(#{$navbar-height} + #{$listBar-height});
 $sidebar-width: 300px;
 $base-size: 10px;
+
+/*
+1.
+#0c093c
+#fad6d6
+
+2.
+#424642;
+#f3f4ed;
+#c06014;
+
+3.
+*/

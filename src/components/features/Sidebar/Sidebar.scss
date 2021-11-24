@@ -1,7 +1,7 @@
 @import "../../../styles/global.scss";
 
 .sidebar {
-  background-color: navy;
+  background-color: $primary-color;
   color: $light-color;
   position: fixed;
   top: $header-height;
