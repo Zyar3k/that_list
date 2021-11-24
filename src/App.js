@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import { ContextProvider } from "./context/StoreContext/GlobalContext";
 
 import Header from "./components/layout/Header/Header";
 import Home from "./components/views/Home/Home";
@@ -7,7 +8,7 @@ import Stats from "./components/views/Stats/Stats";
 
 function App() {
   return (
-    <>
+    <ContextProvider>
       <Header />
 
       <main>
@@ -23,7 +24,7 @@ function App() {
           </Route>
         </Switch>
       </main>
-    </>
+    </ContextProvider>
   );
 }
 
