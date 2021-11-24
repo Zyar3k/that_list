@@ -1,0 +1,97 @@
+@import "../../../styles/global.scss";
+
+.sidebar {
+  background-color: navy;
+  color: $light-color;
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  height: calc(100vh - #{$header-height});
+  width: $sidebar-width;
+  padding: 10px 20px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    width: 100%;
+
+    :nth-of-type(2) {
+      color: $light-color-hover;
+    }
+
+    &:first-of-type {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__cell {
+    width: 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--content {
+      display: flex;
+      flex: 1;
+      justify-content: flex-start;
+    }
+  }
+
+  &__icon {
+    padding: 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--static {
+      pointer-events: none;
+    }
+
+    &:hover {
+      color: $light-color-hover;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: calc(#{$sidebar-width} - 100px);
+
+    &__cell {
+      &--content {
+        justify-content: center;
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    width: calc(#{$sidebar-width} - 250px);
+
+    padding: 0;
+
+    &__row {
+      display: flex;
+
+      align-items: center;
+      border-bottom: 1px solid white;
+
+      width: 100%;
+
+      flex-direction: column;
+
+      &:first-of-type {
+        margin-top: 20px;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import BookTile from "../../features/BookTile/BookTile";
+import Sidebar from "../../features/Sidebar/Sidebar";
 
 import "./Home.scss";
 
@@ -8,9 +9,7 @@ const Home = () => {
   console.log(dbBooks);
   return (
     <>
-      <aside className="sidebar">
-        <p>aside</p>
-      </aside>
+      <Sidebar />
       <section className="home">
         {dbBooks.map((book) => (
           <BookTile key={book._id} book={book} />
