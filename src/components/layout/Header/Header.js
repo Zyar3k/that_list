@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 import { GlobalContext } from "../../../context/GlobalContext";
+import Search from "../../features/Search/Search";
 
 import "./Header.scss";
 
@@ -97,12 +98,7 @@ const Header = () => {
         <div className="header__logo">
           <NavLink to={dataHeader.logo.href}>{dataHeader.logo.name}</NavLink>
         </div>
-        {isHome && (
-          <form className="header__form form" action="">
-            <input type="text" />
-            <i className="fa fa-search" aria-hidden="true"></i>
-          </form>
-        )}
+        {isHome && <Search />}
         <nav className="header__nav">
           <ul className={isOpen ? "header__nav-list open" : "header__nav-list"}>
             {dataHeader.navItems.map((item, index) => (

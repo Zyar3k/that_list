@@ -31,30 +31,7 @@ header {
     }
   }
 
-  &__form {
-    position: relative;
-    input {
-      width: 140px;
-      padding-left: 8px;
-      height: 24px;
-      border: none;
-      border-radius: 4px;
-      outline: none;
-      &:focus,
-      &:active {
-        background-color: $light-color-hover;
-      }
-    }
-
-    i {
-      color: $light-color-hover;
-      position: absolute;
-      right: 6px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 100;
-    }
-  }
+  
 
   &__nav-list {
     display: flex;

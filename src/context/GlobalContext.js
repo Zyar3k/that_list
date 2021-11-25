@@ -6,6 +6,8 @@ import appReducer, {
   FETCH_ERROR,
   FETCH_SUCCESS,
   RENDER_LIST,
+  SEARCH_BOOK,
+  CLEAR_FILTER,
 } from "./AppReducer";
 
 import { dbBooks } from "./../dummyData";
@@ -16,6 +18,7 @@ const initialState = {
   books: [],
   filtered: null,
   all: true,
+  searched: null,
 };
 
 export const GlobalContext = createContext(initialState);
@@ -39,6 +42,13 @@ export const ContextProvider = ({ children }) => {
     dispatch({ type: RENDER_LIST, payload: { name } });
   };
 
+  const searchBook = (id) => {
+    dispatch({ type: SEARCH_BOOK, payload: id });
+  };
+  const clearFilter = () => {
+    dispatch({ type: CLEAR_FILTER });
+  };
+
   return (
     <GlobalContext.Provider
       value={{
@@ -46,8 +56,11 @@ export const ContextProvider = ({ children }) => {
         state,
         books: state.books,
         filtered: state.filtered,
+        searchBook,
+        clearFilter,
         filterByList,
         all: state.all,
+        searched: state.searched,
       }}
     >
       {children}

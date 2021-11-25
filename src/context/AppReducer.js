@@ -1,6 +1,8 @@
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_ERROR = "FETCH_ERROR";
 export const RENDER_LIST = "RENDER_LIST";
+export const SEARCH_BOOK = "SEARCH_BOOK";
+export const CLEAR_FILTER = "CLEAR_FILTER";
 
 export default function appReducer(state, action) {
   switch (action.type) {
@@ -56,6 +58,28 @@ export default function appReducer(state, action) {
         default:
           return state;
       }
+
+    case SEARCH_BOOK:
+      return {
+        ...state,
+        searched: state.books.filter((book) => {
+          return (
+            book.title.toLowerCase().includes(action.payload.toLowerCase()) ||
+            book.author.name
+              .toLowerCase()
+              .includes(action.payload.toLowerCase()) ||
+            book.author.lastName
+              .toLowerCase()
+              .includes(action.payload.toLowerCase())
+          );
+        }),
+      };
+
+    case CLEAR_FILTER:
+      return {
+        ...state,
+        searched: null,
+      };
 
     default:
       return state;
