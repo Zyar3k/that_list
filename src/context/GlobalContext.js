@@ -8,6 +8,7 @@ import appReducer, {
   RENDER_LIST,
   SEARCH_BOOK,
   CLEAR_FILTER,
+  SORT_BY,
 } from "./AppReducer";
 
 import { dbBooks } from "./../dummyData";
@@ -49,6 +50,10 @@ export const ContextProvider = ({ children }) => {
     dispatch({ type: CLEAR_FILTER });
   };
 
+  const sortBy = (name) => {
+    dispatch({ type: SORT_BY, payload: { name } });
+  };
+
   return (
     <GlobalContext.Provider
       value={{
@@ -59,6 +64,7 @@ export const ContextProvider = ({ children }) => {
         searchBook,
         clearFilter,
         filterByList,
+        sortBy,
         all: state.all,
         searched: state.searched,
       }}

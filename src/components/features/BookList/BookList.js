@@ -15,7 +15,7 @@ const BookList = () => {
   useEffect(() => {
     if (searched) {
       setDisplayData(searched);
-    } else if (all || all === undefined) {
+    } else if (all) {
       setDisplayData(books);
     } else {
       setDisplayData(filtered);

@@ -1,6 +1,7 @@
 export const dbBooks = [
   {
     _id: "602c21b15d93e82af8a47352",
+    stars: 2,
     key: "23",
     author: {
       name: "Charles",
@@ -18,6 +19,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a47351",
+    stars: 5,
     key: "22",
     author: {
       name: "F Scott",
@@ -38,6 +40,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a47354",
+    stars: 3,
     key: "25",
     author: {
       name: "Douglas",
@@ -56,6 +59,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a4736b",
+    stars: 3,
     key: "48",
     author: {
       name: "Margaret",
@@ -74,6 +78,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a47397",
+    stars: 4,
     key: "92",
     author: {
       name: "Antoine",
@@ -93,6 +98,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a473a8",
+    stars: 2,
     key: "109",
     author: {
       name: "Heinrich",
@@ -110,6 +116,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a473c0",
+    stars: 2,
     key: "133",
     author: {
       name: "Ernest",
@@ -127,6 +134,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a473c6",
+    stars: 2,
     key: "139",
     author: {
       name: "Tove",
@@ -144,6 +152,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a473d3",
+    stars: 3,
     key: "152",
     author: {
       name: "Howard Phillips",
@@ -162,6 +171,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a473f3",
+    stars: 2,
     key: "184",
     author: {
       name: "Sigrid",
@@ -179,6 +189,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a473ff",
+    stars: 1,
     key: "196",
     author: {
       name: "Borys",
@@ -195,6 +206,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a47408",
+    stars: 1,
     key: "205",
     author: {
       name: "Nikos",
@@ -211,6 +223,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a47419",
+    stars: 2,
     key: "222",
     author: {
       name: "Stieg",
@@ -228,6 +241,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a47421",
+    stars: 1,
     key: "230",
     author: {
       name: "Adam",
@@ -244,6 +258,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a4743d",
+    stars: 1,
     key: "258",
     author: {
       name: "Rick",
@@ -260,6 +275,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a47459",
+    stars: 1,
     key: "286",
     author: {
       name: "Lawrence",
@@ -276,6 +292,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a4745b",
+    stars: 1,
     key: "288",
     author: {
       name: "Doris",
@@ -292,6 +309,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a47357",
+    stars: 3,
     key: "28",
     author: {
       name: "John",
@@ -310,6 +328,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a4735f",
+    stars: 1,
     key: "36",
     author: {
       name: "C.S.",
@@ -326,6 +345,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a47377",
+    stars: 1,
     key: "60",
     author: {
       name: "Gabriel Garcia",
@@ -344,6 +364,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a47396",
+    stars: 2,
     key: "91",
     author: {
       name: "Joseph",
@@ -361,6 +382,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a4739e",
+    stars: 3,
     key: "99",
     author: {
       name: "Roald",
@@ -379,6 +401,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a473b0",
+    stars: 2,
     key: "117",
     author: {
       name: "Henryk",
@@ -396,6 +419,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a473ba",
+    stars: 2,
     key: "127",
     author: {
       name: "Romain",
@@ -413,6 +437,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a473c7",
+    stars: 2,
     key: "140",
     author: {
       name: "Ernst",
@@ -430,6 +455,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a473cd",
+    stars: 2,
     key: "146",
     author: {
       name: "Tadeusz",
@@ -447,6 +473,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a473f6",
+    stars: 4,
     key: "187",
     author: {
       name: "Kurt",
@@ -466,6 +493,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a47400",
+    stars: 1,
     key: "197",
     author: {
       name: "Miguel de",
@@ -482,6 +510,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a47416",
+    stars: 1,
     key: "219",
     author: {
       name: "Anthony",
@@ -498,6 +527,7 @@ export const dbBooks = [
   },
   {
     _id: "602c21b15d93e82af8a4734b",
+    stars: 2,
     key: "16",
     author: {
       name: "JRR",
