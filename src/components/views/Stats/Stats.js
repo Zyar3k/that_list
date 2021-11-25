@@ -1,17 +1,17 @@
 import {
   BarChart,
   Bar,
-  Cell,
+  // Cell,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
   Legend,
   ResponsiveContainer,
-  PieChart,
-  Pie,
-  RadialBarChart,
-  RadialBar,
+  // PieChart,
+  // Pie,
+  // RadialBarChart,
+  // RadialBar,
 } from "recharts";
 
 import "./Stats.scss";

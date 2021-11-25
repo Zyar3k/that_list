@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router-dom";
-import { ContextProvider } from "./context/StoreContext/GlobalContext";
+import { ContextProvider } from "./context/GlobalContext";
 
 import Header from "./components/layout/Header/Header";
 import Home from "./components/views/Home/Home";

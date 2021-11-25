@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+
+import { GlobalContext } from "../../../context/GlobalContext";
 
 import "./Header.scss";
 
@@ -7,6 +9,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHome, setIsHome] = useState(true);
   const [subtitle, setSubtitle] = useState("");
+  const { filterByList } = useContext(GlobalContext);
   let location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -46,36 +49,42 @@ const Header = () => {
         name: "1Lista",
         defaultValue: true,
         icon: "fas fa-network-wired",
+        func: () => filterByList("allBooks"),
       },
       {
         id: "amazon",
         name: "Amazon",
         defaultValue: false,
         icon: "fas fa-dice-one",
+        func: () => filterByList("amazon"),
       },
       {
         id: "bbc",
         name: "BBC",
         defaultValue: false,
         icon: "fas fa-dice-two",
+        func: () => filterByList("bbc"),
       },
       {
         id: "empik",
         name: "Empik",
         defaultValue: false,
         icon: "fas fa-dice-three",
+        func: () => filterByList("empik"),
       },
       {
         id: "gandalf",
         name: "Gandalf",
         defaultValue: false,
         icon: "fas fa-dice-four",
+        func: () => filterByList("gandalf"),
       },
       {
         id: "pozycje",
         name: "Pozycje",
         defaultValue: false,
         icon: "fas fa-dice-five",
+        func: () => filterByList("pozycje"),
       },
     ],
     openIcon: "fa-bars",
@@ -130,6 +139,7 @@ const Header = () => {
                   id={item.id}
                   name="chosenList"
                   value={item.id}
+                  onChange={item.func}
                   className="listBar__input"
                   defaultChecked={item.defaultValue}
                 />

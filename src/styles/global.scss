@@ -12,9 +12,10 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   color: $font-color;
+  background-color: $light-color;
+  overflow-y: scroll;
 }
 
 main {
   display: flex;
-  background-color: $light-color;
 }
