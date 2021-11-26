@@ -83,7 +83,7 @@ const Sidebar = () => {
         </div>
         <div className="sidebar__cell sidebar__cell--content">
           <i className="sidebar__icon sidebar__icon--static fas fa-star "></i>
-          <span>Po ilości stron</span>
+          <span>Gwiazdki</span>
         </div>
         <div className="sidebar__cell">
           <i
