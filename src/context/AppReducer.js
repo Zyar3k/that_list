@@ -91,8 +91,6 @@ export default function appReducer(state, action) {
       }
       let sorted;
       if (value === "nameDown") {
-        console.log(state.all);
-        console.log(sortedList);
         sorted = sortedList.sort((a, b) =>
           a.author.name < b.author.name ? "1" : "-1"
         );
@@ -113,7 +111,6 @@ export default function appReducer(state, action) {
       } else if (value === "pageUp") {
         sorted = sortedList.sort((a, b) => (a.page > b.page ? "1" : "-1"));
       } else if (value === "starDown") {
-        console.log(sortedList);
         sorted = sortedList.sort((a, b) => (a.stars < b.stars ? "1" : "-1"));
       } else if (value === "starUp") {
         sorted = sortedList.sort((a, b) => (a.stars > b.stars ? "1" : "-1"));
